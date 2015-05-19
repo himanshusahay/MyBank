@@ -4,16 +4,52 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private static final String TAG = "MainActivity";
+
+    EditText mAmountInput;
+    Button mWithdrawButton;
+    Button mDepositButton;
+    TextView mBalanceDisplay;
+    BankAccount mCurrentAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
+        mCurrentAccount = new BankAccount();
+
+        mAmountInput = (EditText) findViewById(R.id.amount_input);
+        mWithdrawButton = (Button) findViewById(R.id.withdraw_button);
+        mDepositButton = (Button) findViewById(R.id.deposit_button);
+        mBalanceDisplay = (TextView) findViewById(R.id.balance_display);
+
+        mWithdrawButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String amount = mAmountInput.getText().toString();
+                mCurrentAccount.withdraw(Double.parseDouble(amount));
+                mBalanceDisplay.setText("Balance is " + mCurrentAccount.getBalance());
+            }
+        });
+
+        mDepositButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String amount = mAmountInput.getText().toString();
+                mCurrentAccount.deposit(Double.parseDouble(amount));
+                mBalanceDisplay.setText("Balance is " + mCurrentAccount.getBalance());
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
