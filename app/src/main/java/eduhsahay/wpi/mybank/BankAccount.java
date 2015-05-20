@@ -9,6 +9,10 @@ public class BankAccount {
 
     public void withdraw(double amount){
         mBalance -= amount;
+
+        if(mBalance < 0){
+         mBalance -= OVERDRAFT_FEE;
+        }
     }
 
     public void deposit(double amount){
