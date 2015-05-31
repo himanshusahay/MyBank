@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mCurrentAccount = new BankAccount();
+        mCurrentAccount = new BankAccount(BankAccount.Type.SAVINGS);
 
         mAmountInput = (EditText) findViewById(R.id.amount_input);
         mWithdrawButton = (Button) findViewById(R.id.withdraw_button);
