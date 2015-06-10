@@ -1,6 +1,6 @@
-package edusahay.wpi.mybank.accounts;
+package eduhsahay.wpi.edu.accounts;
 
-import edusahay.wpi.mybank.accounts.BankAccount;
+import eduhsahay.wpi.edu.accounts.BankAccount;
 
 /**
  * Created by Himanshu on 5/31/2015.

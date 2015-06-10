@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import edusahay.wpi.mybank.accounts.BankAccount;
-import edusahay.wpi.mybank.accounts.SavingsAccount;
+import eduhsahay.wpi.edu.accounts.BankAccount;
+import eduhsahay.wpi.edu.accounts.SavingsAccount;
 
 
 public class MainActivity extends ActionBarActivity {

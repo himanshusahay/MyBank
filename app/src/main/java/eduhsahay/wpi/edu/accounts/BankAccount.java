@@ -1,4 +1,4 @@
-package edusahay.wpi.mybank.accounts;
+package eduhsahay.wpi.edu.accounts;
 
 import java.util.ArrayList;
 
