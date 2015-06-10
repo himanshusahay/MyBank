@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import edusahay.wpi.mybank.accounts.BankAccount;
+import edusahay.wpi.mybank.accounts.SavingsAccount;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -25,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mCurrentAccount = new BankAccount(BankAccount.Type.SAVINGS);
+        mCurrentAccount = new SavingsAccount();
 
         mAmountInput = (EditText) findViewById(R.id.amount_input);
         mWithdrawButton = (Button) findViewById(R.id.withdraw_button);
